@@ -18,13 +18,20 @@
 
 ## 📌 Overview
 
-Cryptographic hash calculation & verification,
+
+OVerifyX is a file-integrity and verification tool that computes and compares cryptographic hashes to detect tampering. It supports multiple hash algorithms, baseline manifests and recursive directory verification, reporting added, removed and modified files. It is intended for authorized integrity monitoring and forensic validation.
 
 ---
 
 ## ✨ Features
 
-- File integrity checker: MD5/SHA/BLAKE2b, batch scan, entropy and tamper detection
+
+- Multi-algorithm hashing (SHA-256 and other hashlib digests) of files and directories
+- Baseline manifest creation and later verification against it
+- Recursive directory walking with added / removed / modified detection
+- Clear tamper reporting with per-file status
+- Structured export of verification results
+- Offline --self-test for safe verification
 
 ---
 
@@ -37,8 +44,11 @@ Cryptographic hash calculation & verification,
 
 ## 🚀 Usage
 
+
 ```bash
 ./OVerifyX
+./OVerifyX --self-test
+./OVerifyX --help
 ```
 
 ---
